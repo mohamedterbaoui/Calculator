@@ -1,0 +1,85 @@
+body {
+  font-family: "Courier New", Courier, monospace;
+}
+
+.container {
+  width: 50%;
+  margin: auto;
+  padding: 50px;
+}
+
+.calculator {
+  border-radius: 16px;
+  box-shadow: 5px 5px 20px 4px rgba(0, 0, 0, 0.2);
+  width: 60%;
+  margin: auto;
+}
+
+.display-container {
+  margin: auto;
+  padding: 50px;
+  background-color: antiquewhite;
+  border: 2px solid black;
+  border-radius: 12px;
+}
+
+.screen {
+  height: 80px;
+  border: 2px solid black;
+  border-radius: 12px;
+  background-color: rgb(95, 186, 103);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.screen div {
+  text-align: end;
+  margin-right: 20px;
+  font-size: 24px;
+  font-weight: 700;
+  color: aliceblue;
+}
+.calculator-btns {
+  padding: 30px;
+  margin-top: 30px;
+  border: 2px solid black;
+  border-radius: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  background-color: darkgrey;
+}
+
+.btn {
+  all: unset;
+  cursor: pointer;
+  flex: 1 0 calc(100% / 5);
+  border-radius: 50%;
+  aspect-ratio: 1;
+  text-align: center;
+  background-color: rgb(75, 77, 95);
+  box-shadow: 2px 2px 15px 1px rgba(0, 0, 0, 0.3);
+  font-size: 20px;
+  font-weight: 900;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: seashell;
+}
+
+.btn:hover {
+  background-color: rgb(49, 50, 62);
+}
+
+[id="="] {
+  background-color: rgb(230, 155, 59);
+}
+
+[id="="]:hover {
+  background-color: rgb(223, 132, 14);
+}
