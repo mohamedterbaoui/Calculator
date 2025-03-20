@@ -48,17 +48,48 @@ body {
   border: 2px solid black;
   border-radius: 12px;
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
+  flex-direction: row;
   align-items: center;
   background-color: darkgrey;
+  gap: 5px;
 }
 
-.btn {
+.numbers {
+  flex: 0 1 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0;
+}
+
+.operations {
+  flex: 0 1 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0;
+}
+
+.operations div {
+  background-color: rgb(0, 200, 255);
+}
+
+.operations div:hover {
+  background-color: rgb(10, 89, 89);
+}
+
+#equal {
+  background-color: rgb(245, 201, 54);
+}
+
+#equal:hover {
+  background-color: rgb(206, 144, 0);
+}
+
+.nbr-btn {
   all: unset;
   cursor: pointer;
-  flex: 1 0 calc(100% / 5);
+  flex: 0 0 calc(100% / 3);
   border-radius: 50%;
   aspect-ratio: 1;
   text-align: center;
@@ -70,16 +101,28 @@ body {
   justify-content: center;
   align-items: center;
   color: seashell;
+  min-width: 30px;
+  margin: 3px 0px;
 }
 
-.btn:hover {
+.op-btn {
+  all: unset;
+  cursor: pointer;
+  flex: 0 0 calc(100% / 2);
+  border-radius: 50%;
+  aspect-ratio: 1;
+  text-align: center;
+  box-shadow: 2px 2px 15px 1px rgba(0, 0, 0, 0.3);
+  font-size: 20px;
+  font-weight: 900;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: seashell;
+  min-width: 30px;
+  margin: 3px 0px;
+}
+
+.nbr-btn:hover {
   background-color: rgb(49, 50, 62);
-}
-
-[id="="] {
-  background-color: rgb(230, 155, 59);
-}
-
-[id="="]:hover {
-  background-color: rgb(223, 132, 14);
 }
