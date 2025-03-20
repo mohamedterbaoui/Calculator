@@ -98,20 +98,24 @@ const drawButtons = function () {
   });
 
   const equal = document.createElement("div");
-  const dot = document.createElement("div");
+  const backspace = document.createElement("div");
   const clear = document.createElement("div");
 
   equal.textContent = "=";
   clear.textContent = "C";
+  backspace.textContent = "<=";
 
   equal.classList.add("op-btn");
   clear.classList.add("op-btn");
+  backspace.classList.add("op-btn");
 
   equal.id = "equal";
   clear.id = "clear";
+  backspace.id = "backspace";
 
   btnOperations.append(clear);
   btnOperations.append(equal);
+  btnOperations.append(backspace);
 
   equal.addEventListener("click", () => {
     if (memory.textContent && input.textContent) {
@@ -129,6 +133,12 @@ const drawButtons = function () {
   clear.addEventListener("click", () => {
     memory.textContent = "";
     input.textContent = "";
+  });
+
+  backspace.addEventListener("click", () => {
+    if (input.textContent) {
+      input.textContent = input.textContent.slice(0, -1);
+    }
   });
 };
 
